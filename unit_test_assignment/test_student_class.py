@@ -47,6 +47,9 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             Student(lname='Hardin', fname='Grayson', major='123', gpa=4.0)
 
+    def test_object_not_created_error_gpa(self):
+        with self.assertRaises(ValueError):
+            Student(lname='Hardin', fname='Grayson', major='CIS', gpa='invalid value')
 
 
 
