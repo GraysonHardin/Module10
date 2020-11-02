@@ -55,7 +55,9 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             Student(lname='Hardin', fname='Grayson', major='CIS', gpa=-0.01)
 
-
+    def test_object_gpa_range_is_above_range(self):
+        with self.assertRaises(ValueError):
+            Student(lname='Hardin', fname='Grayson', major='CIS', gpa=4.01)
 
 
 if __name__ == '__main__':
