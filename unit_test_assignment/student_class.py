@@ -16,3 +16,10 @@ class Student:
         return self.last_name + ", " + self.first_name + " has major " + self.major + " with gpa: " + str(self.gpa)
 
 
+def main():
+    grayson_student = Student(lname='Hardin', fname='Grayson', major='CIS', gpa=4.0)
+    print(grayson_student)
+
+
+if __name__ == '__main__':
+    main()
