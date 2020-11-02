@@ -51,6 +51,11 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             Student(lname='Hardin', fname='Grayson', major='CIS', gpa='invalid value')
 
+    def test_object_gpa_range_is_below_range(self):
+        with self.assertRaises(ValueError):
+            Student(lname='Hardin', fname='Grayson', major='CIS', gpa=-0.01)
+
+
 
 
 if __name__ == '__main__':
