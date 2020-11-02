@@ -32,7 +32,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(grayson_student.gpa, expected_gpa)
 
     def test_student_str(self):
-        expected = Student(lname='Hardin', fname='Grayson', major='CIS', gpa=4.0)
+        expected = f'Hardin, Grayson has major CIS with gpa: 4.0'
         self.assertEqual(self.student.__str__(), expected)
 
 
