@@ -35,6 +35,11 @@ class MyTestCase(unittest.TestCase):
         expected = f'Hardin, Grayson has major CIS with gpa: 4.0'
         self.assertEqual(self.student.__str__(), expected)
 
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            Student(lname='123', fname='Grayson', major='CIS', gpa=4.0)
+
+
 
 
 if __name__ == '__main__':
