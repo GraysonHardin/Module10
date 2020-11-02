@@ -6,7 +6,7 @@ class Student:
         self.gpa = gpa
 
         name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
-        if not (name_characters.issuperset(fname) and name_characters.issuperset(lname)):
+        if not (name_characters.issuperset(fname) and name_characters.issuperset(lname) and name_characters.issuperset(major)):
             raise ValueError
 
     def __str__(self):
@@ -20,3 +20,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
